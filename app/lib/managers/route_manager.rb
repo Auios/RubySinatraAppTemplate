@@ -14,14 +14,14 @@ class RouteManager
     end
 
     # return [String]
-    def self.[](name)
+    def [](name)
       result = nil
       result = routes[name].path unless routes[name].nil?
       result
     end
 
     # @return [Route]
-    def self.get_route_from_path(path)
+    def get_route_from_path(path)
       result = nil
       if path
         routes.each do |_, route|
