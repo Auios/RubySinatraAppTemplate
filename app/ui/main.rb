@@ -2,7 +2,7 @@ require_relative '../lib/constants'
 require_relative '../lib/managers/database_manager'
 require_relative 'server'
 
-database_manager = DatabaseManager.new
+database_manager = DatabaseManager.new(Constants::Database::NAME)
 
 unless database_manager.database_exists?(Constants::Database::NAME)
   database_manager.create_table(Constants::Tables::TEST)
